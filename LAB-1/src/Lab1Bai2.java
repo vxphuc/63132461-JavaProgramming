@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 
  */
-public class Lab2Bai2 {
+public class Lab1Bai2 {
 
 	/**
 	 * @param args
@@ -22,8 +22,8 @@ public class Lab2Bai2 {
         double canhnho = Math.min(Cdai, Crong);
         
 		System.out.printf("chu vi hinh chu nhat la:%.2f", chuvi);
-		System.out.printf("dien tich hinh chu nhat la:%.2f", dientich);
-		System.out.printf("canh nho nhat la:%.2f", canhnho);
+		System.out.printf("\ndien tich hinh chu nhat la:%.2f", dientich);
+		System.out.printf("\ncanh nho nhat la:%.2f", canhnho);
 		
 	}
 
