@@ -18,8 +18,13 @@ public class Lab2Bai2 {
 		System.out.print("chieu rong:");
 		float Crong = scanner.nextFloat();
 		double chuvi = (Cdai + Crong)* 2;
+		double dientich = Cdai * Crong;
+        double canhnho = Math.min(Cdai, Crong);
+        
+		System.out.printf("chu vi hinh chu nhat la:%.2f", chuvi);
+		System.out.printf("dien tich hinh chu nhat la:%.2f", dientich);
+		System.out.printf("canh nho nhat la:%.2f", canhnho);
 		
-		System.out.printf("%.2f", chuvi);
 	}
 
 }
