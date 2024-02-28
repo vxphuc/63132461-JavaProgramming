@@ -7,17 +7,20 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class LoginFrame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txta;
-	private JTextField txtb;
+	private JPasswordField txtb;
 
 	/**
 	 * Launch the application.
@@ -41,7 +44,7 @@ public class LoginFrame extends JFrame {
 	public LoginFrame() {
 		setTitle("dang nhap he thong ban hang");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 457, 318);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -62,11 +65,6 @@ public class LoginFrame extends JFrame {
 		contentPane.add(txta);
 		txta.setColumns(10);
 		
-		txtb = new JTextField();
-		txtb.setColumns(10);
-		txtb.setBounds(160, 127, 144, 22);
-		contentPane.add(txtb);
-		
 		JButton btndn = new JButton("Đăng nhập");
 		btndn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -74,21 +72,26 @@ public class LoginFrame extends JFrame {
 			}
 		});
 		btndn.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btndn.setBounds(129, 212, 107, 29);
+		btndn.setBounds(125, 213, 133, 29);
 		contentPane.add(btndn);
+		
+		txtb = new JPasswordField();
+		txtb.setBounds(160, 127, 144, 22);
+		contentPane.add(txtb);
 	}
 	public void xulydangnhap()
 	{
 		String strTDN = txta.getText();
 		String strMK = txtb.getText();
-		if(strTDN.equals("63CNNT") && strMK.equals("123"))
+		if(strTDN.equals("63CNTT") && strMK.equals("123"))
 		{
 			HomeFrame homePage = new HomeFrame();
 			homePage.setVisible(true);
 			this.setVisible(false);
 		}else
 		{
-			
+			JOptionPane hopThoai = new JOptionPane();
+			hopThoai.showMessageDialog(this, "đăng nhập thất bại");
 		}
 	}
 }
